@@ -27,7 +27,7 @@ Portafoglio: 86 listing attivi. Dati da Beyond (prenotazioni accettate, escluse 
 
 ## 2. Periodo di soggiorno delle prenotazioni
 
-![Pick-up per periodo](pickup-periodi-2026-10-19.png)
+![Pick-up per periodo](pickup-periodi-2026-10-19.svg)
 
 Notti per mese di soggiorno: ott 2026 231, nov 84, dic 39, mag 2027 7, giu 2027 22, lug 2027 6, ott 2027 7. Il 58% del pick-up è per ottobre (last minute); la parte a lungo termine è su giugno/luglio 2027.
 
