@@ -39,7 +39,7 @@ Ottobre 227 notti (64%), novembre 70, dicembre 16; il resto sono 39 notti nel 20
 
 Canali (prenotazioni): Booking.com 54, Airbnb 35, Direct 9. Soggiorno medio 3,0 notti.
 
-Prossimi periodi (on-the-books, vs stesso momento 2025): 26/10–01/11 occupazione 46% (−6%), ADR 67, ricavo 17.136 (−35% vs occupazione finale 2025, 64%); 26/10–24/11 occupazione 23% vs 20% un anno fa alla stessa data (+13%), ADR 65 (−9%).
+Prossimi periodi (on-the-books, vs stesso momento 2025): 26/10–01/11 occupazione 46% (−6%), ADR 67, ricavo on-the-books 17.136 (occupazione finale 2025 della stessa settimana: 64%); 26/10–24/11 occupazione 23% vs 20% un anno fa alla stessa data (+13%), ADR 65 (−9%).
 
 ## 4. Appartamenti più indietro (occupazione prossimi 7 e 30 giorni)
 Portafoglio: 46% a 7 giorni, 23% a 30 giorni. Calcolo per appartamento da prenotazioni accettate; non tiene conto di blocchi calendario.
@@ -52,9 +52,9 @@ Azioni suggerite:
 1. Verificare blocchi, override e minimi di soggiorno su quelli a 0%; sono la prima causa di calendario vuoto.
 2. Ridurre il minimo di soggiorno a 1–2 notti nei 7 giorni (domanda last-minute prevalente) e controllare il prezzo minimo.
 3. Per San Francesco 5 (già tra i peggiori ADR a settembre) rivedere base e prezzo minimo.
-4. Per Baita del Plan, Quota 3/6 (montagna probabile) valutare l'apertura stagionale, e per le ville/Milano 22 sconti lunghi soggiorni.
+4. Per Baita del Plan, Quota 3/6, le ville e Milano 22 verificare se la chiusura è stagionale; in caso contrario valutare sconti per soggiorni lunghi.
 Nota: 19 listing non hanno prenotazioni future e non compaiono nell'elenco; vanno verificati a parte.
 
 ## 5. In breve
-**Da attenzionare:** ADR del pick-up crollato (62 vs 92) e occupazione −8 pt sulla settimana appena chiusa; gli ordini a 30 giorni sono deboli (23%) con ADR −9% rispetto a un anno fa; Alta Via 1 con soggiorni da 35–37 €/notte, incluso un mensile a 37.
+**Da attenzionare:** ADR del pick-up crollato (62 vs 92) e occupazione −8 pt sulla settimana appena chiusa; le prenotazioni a 30 giorni sono deboli (23%) con ADR −9% rispetto a un anno fa; Alta Via 1 con soggiorni da 35–37 €/notte, incluso un mensile a 37.
 **Positivo:** ricavo +56% e ADR +3% sulla settimana vs 2025; domanda forte a lungo anticipo per estate 2027 (Vittorio Veneto 50 a 197, Milano 22 a 179); prenotazioni 30 giorni in recupero di occupazione (+13% vs un anno fa).
