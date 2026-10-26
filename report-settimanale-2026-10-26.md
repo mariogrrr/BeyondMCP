@@ -25,7 +25,7 @@ Pick-up in crescita (+34% prenotazioni, +44% notti) ma ADR in calo del 33%: la s
 | Gioiello | 25–26/10/2026 | 40 |
 
 ## 2. Periodo di soggiorno delle prenotazioni
-![grafico](grafico-pickup-2026-10-26.png)
+![grafico](grafico-pickup-2026-10-26.svg)
 
 Ottobre 227 notti (64%), novembre 70, dicembre 16; il resto sono 39 notti nel 2027 (feb, lug, ott, nov). Il pick-up è quasi tutto a brevissimo preavviso.
 
