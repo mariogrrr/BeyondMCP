@@ -1,0 +1,166 @@
+<title>Report Portafoglio 16 Novembre</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap">
+<style>
+/* Layout: single reading column, sezioni numerate come nel report richiesto, tabelle compatte */
+:root{
+  --bg:#f6f8f9; --surface:#ffffff; --fg:#17232b; --muted:#5a6b75; --line:#dbe3e7;
+  --accent:#1f6f8b; --accent-soft:#d9ecf2; --good:#1d7a4c; --good-soft:#dcf1e5; --bad:#b23b2e; --bad-soft:#f8e1dd; --warn:#9a6500; --warn-soft:#f8ecd4;
+  --f-display:"Space Grotesk",ui-sans-serif,system-ui,sans-serif; --f-body:"Inter",ui-sans-serif,system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0f171c; --surface:#16222a; --fg:#e4ecef; --muted:#93a5ae; --line:#263741;
+  --accent:#5bb6d4; --accent-soft:#183644; --good:#5fcf94; --good-soft:#163527; --bad:#f08a7c; --bad-soft:#3a1f1b; --warn:#e3b35a; --warn-soft:#3a2d14; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f171c; --surface:#16222a; --fg:#e4ecef; --muted:#93a5ae; --line:#263741;
+  --accent:#5bb6d4; --accent-soft:#183644; --good:#5fcf94; --good-soft:#163527; --bad:#f08a7c; --bad-soft:#3a1f1b; --warn:#e3b35a; --warn-soft:#3a2d14; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:15px;line-height:1.55}
+.wrap{max-width:860px;margin:0 auto;padding-block:32px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:36px}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;line-height:1.2}
+h1{font-size:30px}
+h2{font-size:21px;display:flex;gap:10px;align-items:baseline}
+h2 .num{color:var(--accent);font-size:15px}
+h3{font-size:15px;margin-top:4px}
+p{margin:0;max-width:68ch}
+.eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.muted{color:var(--muted)}
+section{display:flex;flex-direction:column;gap:14px}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px 14px;display:flex;flex-direction:column;gap:2px}
+.kpi b{font-family:var(--f-display);font-size:24px;font-variant-numeric:tabular-nums}
+.kpi span{font-size:12px;color:var(--muted)}
+.tw{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:8px}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;font-size:14px}
+th,td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+th{font-size:12px;color:var(--muted);font-weight:600;letter-spacing:.03em}
+tr:last-child td{border-bottom:0}
+td.n,th.n{text-align:right}
+.strong{font-weight:600}
+.sub{display:block;font-size:12px;color:var(--muted)}
+.two{display:grid;grid-template-columns:1fr;gap:20px}
+.two>div{min-width:0;display:flex;flex-direction:column;gap:8px}
+.tag{display:inline-block;font-size:12px;font-weight:600;padding:2px 8px;border-radius:99px}
+.up{color:var(--good);background:var(--good-soft)} .down{color:var(--bad);background:var(--bad-soft)} .flat{color:var(--warn);background:var(--warn-soft)}
+.chart{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px 8px}
+.chart svg{width:100%;height:auto;display:block}
+.bar{fill:var(--accent)} .grid{stroke:var(--line);stroke-width:1} .ax{fill:var(--muted);font-size:12px;font-family:var(--f-body)} .lbl{fill:var(--fg);font-size:11px;font-weight:600;font-family:var(--f-body)}
+.group{display:flex;flex-direction:column;gap:8px;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--sev);border-radius:8px;padding:14px 16px}
+.group.a{--sev:var(--bad)} .group.b{--sev:var(--muted)} .group.c{--sev:var(--warn)} .group.d{--sev:var(--accent)}
+.group ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px}
+.notes{display:flex;flex-direction:column;gap:10px;margin:0;padding-left:18px}
+.foot{font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:14px;display:flex;flex-direction:column;gap:4px}
+@media (max-width:640px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.two{grid-template-columns:1fr}h1{font-size:24px}}
+</style>
+
+<div class="wrap">
+<header style="display:flex;flex-direction:column;gap:6px">
+  <div class="eyebrow">Report settimanale · lunedì 16 novembre 2026</div>
+  <h1>Portafoglio Liguria e Genova</h1>
+  <p class="muted">Pick-up della settimana 9–15 novembre, confronto con lo stesso periodo 2025 e situazione dei prossimi 30 giorni. 87 appartamenti attivi su Beyond.</p>
+</header>
+
+<section>
+  <h2><span class="num">1</span>Pick-up della scorsa settimana</h2>
+  <div class="kpis">
+    <div class="kpi"><span>Prenotazioni confermate</span><b>92</b><span>+1 in attesa, 9 cancellate</span></div>
+    <div class="kpi"><span>Notti</span><b>302</b><span>3,3 notti di media</span></div>
+    <div class="kpi"><span>Ricavo</span><b>€23.173</b><span>affitto, esclusi extra</span></div>
+    <div class="kpi"><span>ADR medio</span><b>€77</b><span>vs €69 stessa sett. 2025</span></div>
+  </div>
+  <div class="two">
+    <div><h3 style="color:var(--good)">Migliori per ADR</h3>
+      <div class="tw"><table><thead><tr><th>Appartamento</th><th class="n">Check-in</th><th class="n">Notti</th><th class="n">Ricavo</th><th class="n">ADR</th></tr></thead><tbody><tr><td>Al Castello - Villa Anna Grande<span class='sub'>Noli</span></td><td class='n'>03/09/27</td><td class='n'>7</td><td class='n'>€2.461</td><td class='n strong'>€352</td></tr><tr><td>Perugia<span class='sub'>Savona</span></td><td class='n'>12/07/27</td><td class='n'>6</td><td class='n'>€1.351</td><td class='n strong'>€225</td></tr><tr><td>Baita del Plan<span class='sub'>Plan</span></td><td class='n'>11/02/27</td><td class='n'>3</td><td class='n'>€587</td><td class='n strong'>€196</td></tr><tr><td>Colcavagno<span class='sub'>Colcavagno</span></td><td class='n'>19/06/27</td><td class='n'>7</td><td class='n'>€1.154</td><td class='n strong'>€165</td></tr><tr><td>Padre Lorenzo Piazza 32<span class='sub'>Varazze</span></td><td class='n'>24/12/26</td><td class='n'>3</td><td class='n'>€472</td><td class='n strong'>€157</td></tr></tbody></table></div></div>
+    <div><h3 style="color:var(--bad)">Peggiori per ADR</h3>
+      <div class="tw"><table><thead><tr><th>Appartamento</th><th class="n">Check-in</th><th class="n">Notti</th><th class="n">Ricavo</th><th class="n">ADR</th></tr></thead><tbody><tr><td>Giovanni XXIII<span class='sub'>Albisola Superiore</span></td><td class='n'>11/11/26</td><td class='n'>6</td><td class='n'>€188</td><td class='n strong'>€31</td></tr><tr><td>Bottini<span class='sub'>Celle Ligure</span></td><td class='n'>09/11/26</td><td class='n'>1</td><td class='n'>€32</td><td class='n strong'>€32</td></tr><tr><td>Bottini<span class='sub'>Celle Ligure</span></td><td class='n'>11/11/26</td><td class='n'>3</td><td class='n'>€101</td><td class='n strong'>€34</td></tr><tr><td>Cadorna 16<span class='sub'>Savona</span></td><td class='n'>13/11/26</td><td class='n'>3</td><td class='n'>€115</td><td class='n strong'>€38</td></tr><tr><td>Altare<span class='sub'>Altare</span></td><td class='n'>06/12/26</td><td class='n'>1</td><td class='n'>€39</td><td class='n strong'>€39</td></tr></tbody></table></div></div>
+  </div>
+  <p>Le prenotazioni migliori sono tutte a lungo anticipo (feste, settimane bianche ed estate 2027). Le peggiori sono tutte last-minute, con check-in entro 3 settimane. Tre di loro (Bottini due volte e Cadorna 16) sono su appartamenti che oggi non hanno altre notti prenotate nei prossimi 30 giorni (vedi sezione 4). Bottini compare due volte, con un ADR di circa €33.</p>
+</section>
+
+<section>
+  <h2><span class="num">2</span>Per quale periodo sono arrivate le prenotazioni</h2>
+  <div class="chart"><svg viewBox='0 0 640 260' role='img' aria-label='Ricavo prenotato nella settimana per mese di check-in'><line x1='48' x2='632' y1='220.0' y2='220.0' class='grid'/><text x='40' y='224.0' class='ax' text-anchor='end'>0</text><line x1='48' x2='632' y1='154.7' y2='154.7' class='grid'/><text x='40' y='158.7' class='ax' text-anchor='end'>€3k</text><line x1='48' x2='632' y1='89.3' y2='89.3' class='grid'/><text x='40' y='93.3' class='ax' text-anchor='end'>€6k</text><line x1='48' x2='632' y1='24.0' y2='24.0' class='grid'/><text x='40' y='28.0' class='ax' text-anchor='end'>€9k</text><rect x='57.4' y='47.6' width='33.5' height='172.4' rx='3' class='bar'/><text x='74.2' y='41.6' class='lbl' text-anchor='middle'>58 pren.</text><text x='74.2' y='238' class='ax' text-anchor='middle'>Nov ’26</text><rect x='109.8' y='82.3' width='33.5' height='137.7' rx='3' class='bar'/><text x='126.5' y='76.3' class='lbl' text-anchor='middle'>25 pren.</text><text x='126.5' y='238' class='ax' text-anchor='middle'>Dic</text><rect x='162.2' y='206.5' width='33.5' height='13.5' rx='3' class='bar'/><text x='178.9' y='200.5' class='lbl' text-anchor='middle'>2 pren.</text><text x='178.9' y='238' class='ax' text-anchor='middle'>Gen ’27</text><rect x='214.5' y='194.7' width='33.5' height='25.3' rx='3' class='bar'/><text x='231.3' y='188.7' class='lbl' text-anchor='middle'>2 pren.</text><text x='231.3' y='238' class='ax' text-anchor='middle'>Feb</text><rect x='266.9' y='219.1' width='33.5' height='0.9' rx='3' class='bar'/><text x='283.6' y='213.1' class='lbl' text-anchor='middle'>1 pren.</text><text x='283.6' y='238' class='ax' text-anchor='middle'>Mar</text><rect x='319.2' y='173.2' width='33.5' height='46.8' rx='3' class='bar'/><text x='336.0' y='167.2' class='lbl' text-anchor='middle'>1 pren.</text><text x='336.0' y='238' class='ax' text-anchor='middle'>Apr</text><rect x='371.6' y='220.0' width='33.5' height='0.0' rx='3' class='bar'/><text x='388.4' y='238' class='ax' text-anchor='middle'>Mag</text><rect x='424.0' y='194.9' width='33.5' height='25.1' rx='3' class='bar'/><text x='440.7' y='188.9' class='lbl' text-anchor='middle'>1 pren.</text><text x='440.7' y='238' class='ax' text-anchor='middle'>Giu</text><rect x='476.3' y='190.6' width='33.5' height='29.4' rx='3' class='bar'/><text x='493.1' y='184.6' class='lbl' text-anchor='middle'>1 pren.</text><text x='493.1' y='238' class='ax' text-anchor='middle'>Lug</text><rect x='528.7' y='220.0' width='33.5' height='0.0' rx='3' class='bar'/><text x='545.5' y='238' class='ax' text-anchor='middle'>Ago</text><rect x='581.1' y='166.4' width='33.5' height='53.6' rx='3' class='bar'/><text x='597.8' y='160.4' class='lbl' text-anchor='middle'>1 pren.</text><text x='597.8' y='238' class='ax' text-anchor='middle'>Set</text></svg></div>
+  <p class="muted" style="font-size:13px">Ricavo prenotato nella settimana, per mese di check-in. Sopra ogni barra il numero di prenotazioni.</p>
+  <div class="tw"><table><thead><tr><th>Anticipo rispetto a oggi</th><th class="n">Pren.</th><th class="n">Notti</th><th class="n">Ricavo</th><th class="n">ADR</th></tr></thead><tbody><tr><td>Stessa settimana (9–15 nov)</td><td class='n'>38</td><td class='n'>102</td><td class='n'>€4.793</td><td class='n strong'>€47</td></tr><tr><td>Prossimi 7 gg</td><td class='n'>13</td><td class='n'>35</td><td class='n'>€1.858</td><td class='n strong'>€53</td></tr><tr><td>8–30 gg</td><td class='n'>27</td><td class='n'>92</td><td class='n'>€5.429</td><td class='n strong'>€59</td></tr><tr><td>31–60 gg (feste e inizio gennaio)</td><td class='n'>6</td><td class='n'>24</td><td class='n'>€2.526</td><td class='n strong'>€105</td></tr><tr><td>Oltre 60 gg</td><td class='n'>8</td><td class='n'>49</td><td class='n'>€8.567</td><td class='n strong'>€175</td></tr></tbody></table></div>
+  <p>Il 63% delle prenotazioni (58 su 92) è per novembre, con un ADR di €48. Il 41% (38) aveva il check-in nella settimana stessa. Le 9 prenotazioni per il 2027 sono poche ma valgono €8.937, il 39% del ricavo della settimana.</p>
+</section>
+
+<section>
+  <h2><span class="num">3</span>Andamento rispetto allo stesso periodo 2025</h2>
+  <div class="tw"><table>
+    <thead><tr><th>Finestra</th><th>Metrica</th><th class="n">2026</th><th class="n">Stesso momento 2025</th><th class="n">Var.</th><th class="n">Finale 2025</th></tr></thead>
+    <tbody>
+      <tr><td rowspan="3" class="strong">Pick-up settimana<span class="sub">prenotato 9–15 nov</span></td><td>Ricavo</td><td class="n">€19.801</td><td class="n">€13.205</td><td class="n"><span class="tag up">+50%</span></td><td class="n">–</td></tr>
+      <tr><td>Notti</td><td class="n">267</td><td class="n">191</td><td class="n"><span class="tag up">+40%</span></td><td class="n">–</td></tr>
+      <tr><td>ADR</td><td class="n">€74</td><td class="n">€69</td><td class="n"><span class="tag up">+7%</span></td><td class="n">–</td></tr>
+      <tr><td rowspan="4" class="strong">Ultimi 30 giorni<span class="sub">soggiorni 16 ott–15 nov</span></td><td>Ricavo</td><td class="n">€89.817</td><td class="n">€51.851</td><td class="n"><span class="tag up">+73%</span></td><td class="n">€51.851</td></tr>
+      <tr><td>Occupazione</td><td class="n">61%</td><td class="n">63%</td><td class="n"><span class="tag down">−3%</span></td><td class="n">63%</td></tr>
+      <tr><td>ADR</td><td class="n">€62</td><td class="n">€61</td><td class="n"><span class="tag flat">+1%</span></td><td class="n">€61</td></tr>
+      <tr><td>RevPAN</td><td class="n">€37</td><td class="n">€38</td><td class="n"><span class="tag down">−2%</span></td><td class="n">€38</td></tr>
+      <tr><td rowspan="4" class="strong">Prossimi 30 giorni<span class="sub">on the books, 16 nov–15 dic</span></td><td>Ricavo</td><td class="n">€30.682</td><td class="n">€17.689</td><td class="n"><span class="tag up">+73%</span></td><td class="n">€35.635</td></tr>
+      <tr><td>Occupazione</td><td class="n">23%</td><td class="n">20%</td><td class="n"><span class="tag up">+13%</span></td><td class="n">45%</td></tr>
+      <tr><td>ADR</td><td class="n">€57</td><td class="n">€60</td><td class="n"><span class="tag down">−5%</span></td><td class="n">€55</td></tr>
+      <tr><td>RevPAN</td><td class="n">€13</td><td class="n">€12</td><td class="n"><span class="tag up">+7%</span></td><td class="n">€24</td></tr>
+      <tr><td rowspan="4" class="strong">Prossimi 90 giorni<span class="sub">on the books, 16 nov–14 feb</span></td><td>Ricavo</td><td class="n">€64.781</td><td class="n">€36.684</td><td class="n"><span class="tag up">+77%</span></td><td class="n">€147.398</td></tr>
+      <tr><td>Occupazione</td><td class="n">12%</td><td class="n">10%</td><td class="n"><span class="tag up">+22%</span></td><td class="n">52%</td></tr>
+      <tr><td>ADR</td><td class="n">€73</td><td class="n">€79</td><td class="n"><span class="tag down">−8%</span></td><td class="n">€60</td></tr>
+      <tr><td>RevPAN</td><td class="n">€9</td><td class="n">€8</td><td class="n"><span class="tag up">+14%</span></td><td class="n">€31</td></tr>
+    </tbody></table></div>
+  <p>Il ricavo totale cresce soprattutto perché il portafoglio ha più appartamenti del 2025. Le metriche per unità sono più vicine allo scorso anno. Negli ultimi 30 giorni occupazione e RevPAN sono leggermente sotto il 2025. Sulle prossime settimane l'occupazione è avanti, ma con un ADR più basso.</p>
+</section>
+
+<section>
+  <h2><span class="num">4</span>Appartamenti in ritardo a 7 e 30 giorni</h2>
+  <p>Media del portafoglio sulle notti già prenotate: <b>27%</b> nei prossimi 7 giorni e <b>20%</b> nei prossimi 30 (calcolo sulle notti di calendario, notti bloccate incluse). 46 appartamenti non hanno nessuna notte prenotata nei prossimi 7 giorni, 25 nessuna nei prossimi 30.</p>
+
+  <div class="group a">
+    <h3>A · Vendono solo last-minute e a prezzo basso: 0 notti a 30 giorni</h3>
+    <ul>
+      <li><b>Bottini</b> (Celle Ligure, base €120): venduto la scorsa settimana a €32–34 a notte.</li>
+      <li><b>Cadorna 16</b> (base €100) a €38 · <b>Saredo 22</b> (€84) a €45 · <b>Brignoni 1</b> (€80) a €45–51 · <b>Piccone 4</b> (€100) a €51 · <b>Lottero</b> (€108) a €58 · <b>San Francesco 5</b> (€89) a €67.</li>
+      <li>Quasi vuoti anche <b>Piccone 14</b>, <b>Borgo Castello</b> e <b>Alta Via 2</b> (2 notti su 30).</li>
+    </ul>
+    <p><b>Azioni:</b> il divario tra prezzo base e ADR incassato è troppo ampio. Abbassare il base price del 10–15% fino a metà dicembre, così che i prezzi a 2–3 settimane siano già competitivi e non si arrivi al prezzo minimo all'ultimo momento. Portare il soggiorno minimo a 1–2 notti nei giorni feriali.</p>
+  </div>
+
+  <div class="group d">
+    <h3>B · Vuoti nei prossimi 7 giorni, con prenotazioni più avanti</h3>
+    <ul>
+      <li><b>Brignole De Ferrari 4</b> (0/7, 15/30) · <b>Lagaccio</b> (0/7, 11/30) · <b>Mimose</b> (0/7, 8/30) · <b>Verdi 16</b>, <b>Cassari 3B</b>, <b>Paleocapa 6 B</b> (0/7, 7/30) · <b>Paleocapa 6 A</b> (0/7, 6/30).</li>
+    </ul>
+    <p><b>Azioni:</b> per questa settimana, soggiorno minimo 1 notte e un override del −10% su lun–gio. Hanno già domanda più avanti, quindi non serve toccare il prezzo base.</p>
+  </div>
+
+  <div class="group c">
+    <h3>C · Nessuna prenotazione a 30 giorni, calendario da verificare</h3>
+    <ul>
+      <li>Savona e dintorni: <b>Vittorio Veneto 10</b> (3 camere, base €150), <b>Repetto 26</b> (€142), <b>Bernardo 12</b> (nuovo, €108), <b>Molo</b>, <b>Grosso</b>, <b>Diaz 4F</b>, <b>Vittorio Veneto 50</b>, <b>Cassari 3A</b>, <b>Pirandello 5</b>, <b>Quota 3</b>.</li>
+      <li>Varazze: <b>Oleandri</b>, <b>Milano 22</b>, <b>Bagnasco</b>. Genova: <b>XII Ottobre B</b>.</li>
+      <li>Probabilmente chiusi per stagione: <b>Villa Anna Grande</b> e <b>Villa Anna Piccolo</b> (Noli), <b>Monaco – Villa del Golfo</b> (3/30), <b>Baita del Plan</b> (3/30).</li>
+    </ul>
+    <p><b>Azioni:</b> prima controllare se le notti sono bloccate. Ho verificato due casi: <b>Nizza 128</b> è bloccato per tutti i 30 giorni e <b>Genova 15</b> fino al 4 dicembre. Se il blocco non è voluto, riaprire subito. Per quelli aperti, i base price più alti (Vittorio Veneto 10, Repetto 26, Bernardo 12) vanno confrontati con il comp set.</p>
+  </div>
+
+  <div class="group b">
+    <h3>Su tutto il portafoglio</h3>
+    <p>Il soggiorno minimo medio è di 3,0 notti, contro 2,2 del mercato, dove il soggiorno medio è di 2,0 notti. Tra il 16 novembre e il 20 dicembre conviene portare il minimo a 2 notti sugli appartamenti dei gruppi A, B e C, lasciando invariato il ponte dell'Immacolata.</p>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">5</span>Sintesi dell'andamento</h2>
+  <ul class="notes">
+    <li><b>Positivo:</b> il pick-up della settimana è sopra il 2025 del 50% in ricavo e del 7% in ADR. Arrivano prenotazioni di valore con molto anticipo: Villa Anna Grande a settembre 2027 (€352/notte), Perugia a luglio (€225), Baita del Plan a febbraio (€196), Waterfront ad aprile (14 notti a €154).</li>
+    <li><b>Ponte dell'Immacolata forte:</b> 38 appartamenti su 87 hanno già un check-in tra il 4 e il 6 dicembre. Sugli appartamenti ancora liberi quei giorni non serve scontare: verificare che il prezzo pubblicato non sia abbassato dallo sconto per bassa occupazione (per Genova 15 è −17,5%).</li>
+    <li><b>Natale:</b> le prime prenotazioni per le feste hanno un ADR tra €107 e €157, un buon segnale per il prezzo di dicembre.</li>
+    <li><b>Da attenzionare, crescita per volume:</b> il ricavo è sopra lo scorso anno perché ci sono più appartamenti. A parità di unità, occupazione e RevPAN degli ultimi 30 giorni sono sotto il 2025 (−3% e −2%). L'ADR sulle prenotazioni future è più basso (−5% a 30 giorni, −8% a 90).</li>
+    <li><b>Da attenzionare, last-minute:</b> il 41% delle prenotazioni della settimana è arrivato per la settimana stessa, con un ADR di €47. Rispetto al finale 2025, per i prossimi 30 giorni manca ancora metà dell'occupazione (23% contro 45%).</li>
+    <li><b>Da verificare:</b> per Amendola c'è una richiesta in attesa dal 18 gennaio al 4 marzo (45 notti) a €30/notte, sotto il prezzo minimo di €40. Valutare se accettarla. Nella settimana ci sono state 9 cancellazioni, alcune riprenotate subito (per esempio Padre Lorenzo Piazza 32 a Natale).</li>
+  </ul>
+</section>
+
+<footer class="foot">
+  <span>Fonte: Beyond (prenotazioni, performance di portafoglio, calendari). Il pick-up nella sezione 1 è calcolato sulle singole prenotazioni confermate. I confronti con il 2025 della sezione 3 sono i dati aggregati di Beyond, che usano un perimetro leggermente diverso.</span>
+  <span>Le occupazioni della sezione 4 non escludono le notti bloccate. Lo stato dei calendari è verificato solo per Nizza 128 e Genova 15.</span>
+</footer>
+</div>
